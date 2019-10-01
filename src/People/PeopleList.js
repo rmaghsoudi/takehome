@@ -1,14 +1,16 @@
 import React from 'react';
 
-const PeopleList = () => {
+const PeopleList = (props) => {
 
   return (
-    <ul>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-    </ul>
+    <div className="people-list">
+    {/* {Array.isArray(people) && people.length ? 
+      <ul>
+
+      </ul> :
+      null
+    } */}
+  </div>
   )
 }
 
