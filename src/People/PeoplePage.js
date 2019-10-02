@@ -16,6 +16,7 @@ const PeoplePage = () => {
     })
       .then(resp => resp.json())
       .then(data => {
+        //TODO: Limit amount of data fetched
         setPeople(data.data)
       })
   })
