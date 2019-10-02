@@ -51,7 +51,7 @@ class PeoplePage extends Component {
         {/* if people is an array and isn't empty, render the list */}
         {Array.isArray(this.state.people) && this.state.people.length ? 
           <>
-          <button onClick={this.uniquinator}>Toggle Uniquify</button>
+          <button id="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
           <PeopleList people={this.state.people}></PeopleList>
           </> :
           <h3>No people here</h3>

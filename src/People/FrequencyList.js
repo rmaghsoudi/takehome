@@ -4,14 +4,13 @@ const FrequencyList = (props) => {
 
   return (
     <div className="frequency-list">
-    {console.log(!!Object.keys(props.charCount).length)}
     {!!Object.keys(props.charCount).length ? 
       <ul>
        { Object.keys(props.charCount).sort(function(a, b) {
           return props.charCount[b] - props.charCount[a]})
           .map(function(k) {
           return (
-            <li>{`${k}: ${props.charCount[k]}`}</li>
+            <li key={k}>{`${k}: ${props.charCount[k]}`}</li>
             )
 })
         }

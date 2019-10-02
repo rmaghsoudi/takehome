@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrequencyList Component Unit Tests FrequencyList should render correctly given a charCount object 1`] = `ShallowWrapper {}`;
+
+exports[`FrequencyList Component Unit Tests FrequencyList should sort charCount in descending order 1`] = `ShallowWrapper {}`;

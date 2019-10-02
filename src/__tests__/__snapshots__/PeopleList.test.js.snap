@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PeopleList Component Unit Tests PeopleList should render correctly given an array of people objects 1`] = `ShallowWrapper {}`;
