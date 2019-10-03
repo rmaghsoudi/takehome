@@ -57,13 +57,13 @@ class PeoplePage extends Component {
 
         {this.state.uniqueToggle ?
           <>
-            <button id="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
+            <button className="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
             <FrequencyList charCount={this.state.charCount}></FrequencyList> 
           </>
             :
           Array.isArray(this.state.people) && this.state.people.length ? 
             <>
-              <button id="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
+              <button className="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
               <PeopleList people={this.state.people}></PeopleList>
             </>
             :
