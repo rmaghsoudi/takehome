@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+
 /* GENERAL TABLE STYLING */
 table, th, td {
   border: 1px solid black;
@@ -23,10 +24,11 @@ th {
   background-color: rgb(38, 150, 255);
   color: white;
   height: 50px;
+  text-align: center;
 }
 
 td {
-  height: 50px;
+  height: 25px;
   text-align: left;
   vertical-align: bottom;
 }

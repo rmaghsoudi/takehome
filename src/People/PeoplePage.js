@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PeopleList from './PeopleList';
 import FrequencyList from './FrequencyList';
+import logo from '../images/salesloftLogo.png'
 
 class PeoplePage extends Component {
 
@@ -51,16 +52,23 @@ class PeoplePage extends Component {
     render() {
       return (
         <div>
+        <img src={logo} alt="SalesLoft Logo" width="200" height="100"/>
         <h1>Welcome to the People-Email-Unique-Character-Counter-inator</h1>
-        {/* if people is an array and isn't empty, render the list */}
-        {Array.isArray(this.state.people) && this.state.people.length ? 
+
+        {this.state.uniqueToggle ?
           <>
-          <button id="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
-          <PeopleList people={this.state.people}></PeopleList>
-          </> :
-          <div className="spinner"></div>
+            <button id="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
+            <FrequencyList charCount={this.state.charCount}></FrequencyList> 
+          </>
+            :
+          Array.isArray(this.state.people) && this.state.people.length ? 
+            <>
+              <button id="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
+              <PeopleList people={this.state.people}></PeopleList>
+            </>
+            :
+            <div className="spinner"></div>
         }
-        {this.state.uniqueToggle ?  <FrequencyList charCount={this.state.charCount}></FrequencyList> : null}
       </div>
       )
     }

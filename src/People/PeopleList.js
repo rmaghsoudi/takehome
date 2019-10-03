@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Stylesheets/PeopleList.css'
 
 const PeopleList = (props) => {
 
