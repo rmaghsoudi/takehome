@@ -4,18 +4,28 @@ const FrequencyList = (props) => {
 
   return (
     <div className="frequency-list">
+    {/* conditional rendering to check if the object is empty */}
     {!!Object.keys(props.charCount).length ? 
-      <ul>
+      <table className="frequency-table">
+        <tbody>
+          <tr>
+            <th>Character</th>
+            <th>Unique Appearances</th>
+          </tr>
        { Object.keys(props.charCount).sort(function(a, b) {
           return props.charCount[b] - props.charCount[a]})
           .map(function(k) {
           return (
-            <li key={k}>{`${k}: ${props.charCount[k]}`}</li>
+            <tr key={k}>
+            <th>{k}</th>
+            <th>{props.charCount[k]}</th>
+            </tr>
             )
 })
         }
-      </ul> :
-      <h3>HI</h3>
+        </tbody>
+      </table> :
+      <h3>An error has occured</h3>
     }
   </div>
   )

@@ -33,7 +33,11 @@ class PeoplePage extends Component {
       // displays the frequency count of all the unique chars in the e-mails sorted by frequency count DESC
       const count = {}
       this.state.people.map(person => {
-        person.email_address.split('').map(letter => {
+       const charArr = person.email_address.split('')
+      // creating an array with UNIQUE chars for each email
+       const uniqCharArr = [...new Set(charArr)]
+       // keeping a count of each char by building an object as it iterates
+       uniqCharArr.map(letter => {
           if (count[letter]) {
             count[letter] ++
           } else {
@@ -54,7 +58,7 @@ class PeoplePage extends Component {
           <button id="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
           <PeopleList people={this.state.people}></PeopleList>
           </> :
-          <h3>No people here</h3>
+          <h3>Couldn't find any people.</h3>
         }
         {this.state.uniqueToggle ?  <FrequencyList charCount={this.state.charCount}></FrequencyList> : null}
       </div>

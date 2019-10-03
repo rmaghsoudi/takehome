@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Stylesheets/PeopleList.css'
 
 const PeopleList = (props) => {
 
@@ -6,20 +7,27 @@ const PeopleList = (props) => {
     // TODO: Add Pagination
     <div className="people-list">
     {Array.isArray(props.people) && props.people.length ? 
-      <ul>
+      <table className="people-table">
+        <tbody>
+          <tr>
+            <th>Index</th>
+            <th>Full Name</th>
+            <th>Job Title</th>
+            <th>Email Address</th>
+          </tr>
        { props.people.map(person => {
          return(
-         <li key={person.id}>
-          <strong>Name: </strong>{person.display_name}
-          <br />
-          <strong>Job Title: </strong>{person.title}
-          <br />
-          <strong>Email: </strong>{person.email_address}
-          </li>
+         <tr key={person.id}>
+          <th>{props.people.indexOf(person) + 1}</th>
+          <th>{person.display_name}</th>
+          <th>{person.title}</th>
+          <th>{person.email_address}</th>
+          </tr>
             )
           })
         }
-      </ul> :
+        </tbody>
+      </table> :
       null
     }
   </div>
