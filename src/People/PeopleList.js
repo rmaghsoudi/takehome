@@ -18,10 +18,10 @@ const PeopleList = (props) => {
        { props.people.map(person => {
          return(
          <tr key={person.id}>
-          <th>{props.people.indexOf(person) + 1}</th>
-          <th>{person.display_name}</th>
-          <th>{person.title}</th>
-          <th>{person.email_address}</th>
+          <td>{props.people.indexOf(person) + 1}</td>
+          <td>{person.display_name}</td>
+          <td>{person.title}</td>
+          <td>{person.email_address}</td>
           </tr>
             )
           })

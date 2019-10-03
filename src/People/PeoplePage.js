@@ -58,7 +58,7 @@ class PeoplePage extends Component {
           <button id="uniquify" onClick={this.uniquinator}>Toggle Uniquify</button>
           <PeopleList people={this.state.people}></PeopleList>
           </> :
-          <h3>Couldn't find any people.</h3>
+          <div className="spinner"></div>
         }
         {this.state.uniqueToggle ?  <FrequencyList charCount={this.state.charCount}></FrequencyList> : null}
       </div>

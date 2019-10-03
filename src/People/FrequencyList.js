@@ -17,8 +17,8 @@ const FrequencyList = (props) => {
           .map(function(k) {
           return (
             <tr key={k}>
-            <th>{k}</th>
-            <th>{props.charCount[k]}</th>
+            <td>{k}</td>
+            <td>{props.charCount[k]}</td>
             </tr>
             )
 })
