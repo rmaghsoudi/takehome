@@ -30,7 +30,7 @@ class PeoplePage extends Component {
       })
     }
     
-    uniquinator = (e) => {
+    uniquinator = () => {
       // displays the frequency count of all the unique chars in the e-mails sorted by frequency count DESC
       const count = {}
       this.state.people.map(person => {
